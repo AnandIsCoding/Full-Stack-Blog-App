@@ -60,7 +60,7 @@ function CreateBlog() {
       const data = await res.data;
      setLoading(false)
      
-      toast.success(data.message);
+      toast.success('Blog created successfully');
       console.log(data.message);
        // Clear form fields on successful submission
     blogTitle.current.value = "";
@@ -69,7 +69,8 @@ function CreateBlog() {
     setBlogTags([]);
     } catch (error) {
       setLoading(false)
-      toast.error("Internal server error");
+      toast.error(error.message)
+      alert('Refresh all blogs section if not created try again ')
     }
   };
 
@@ -160,7 +161,7 @@ function CreateBlog() {
             name="description"
             id="description"
             ref={blogDescription}
-            placeholder="Enter description of post"
+            placeholder=" Minimum 10 characters"
             className="w-full min-h-[30vh] bg-transparent outline-none rounded-xl border-2 border-violet-600 mt-2 py-3 text-lg px-3 text-zinc-800 font-semibold"
           ></textarea>
           <button

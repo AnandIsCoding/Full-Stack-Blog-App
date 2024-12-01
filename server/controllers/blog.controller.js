@@ -58,7 +58,7 @@ export const addBlogController = async (req, res) => {
     console.error("Error in addBlogController:", error); // Log specific error
     return res
       .status(500)
-      .json({ message: "Internal server error", success: false });
+      .json({ message: "Internal server error", success: false, error });
       
   }
 };

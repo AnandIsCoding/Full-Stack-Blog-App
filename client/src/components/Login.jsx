@@ -40,6 +40,8 @@ function Login() {
         <input required ref={password} id='password'   type='password' placeholder='Enter your password 🔑' className='px-5 py-3 outline-none bg-transparent border-4 border-black rounded-xl text-black font-bold shadow-inner shadow-black' autoComplete='false'></input>
 
         <input type='submit' value='Submit' className='px-5 py-2 outline-none bg-black text-2xl text-white font-extrabold rounded-xl cursor-pointer shadow shadow-violet-300'></input>
+
+        <p>login with aditya@gmail.com and Aditya@1245 (available for some days) </p>
     </form>
     </div>
   )

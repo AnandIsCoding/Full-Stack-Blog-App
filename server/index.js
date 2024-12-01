@@ -7,11 +7,13 @@ import userRouter from "./routes/user.router.js";
 
 import cookieParser from "cookie-parser";
 import blogRouter from "./routes/blog.router.js";
+import path from 'path'
 
 import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
+const _dirname = path.resolve()
 
 import fileupload from 'express-fileupload';
 
@@ -33,6 +35,8 @@ app.use(fileupload({
 }));
 
 
+
+
 // Cloudinary setup
 import { cloudinaryConnect } from './config/cloudinary.js';
 cloudinaryConnect();  // Correct way to call cloudinaryConnect
@@ -43,6 +47,10 @@ app.use('/api/v1', userRouter);
 app.use('/api/v1/blog', blogRouter)
 
 
+app.use(express.static(path.join(_dirname, "/client/dist")))
+app.get('*',(_,res)=>{
+  res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"))
+})
 
 //database connectivity
 connectToDb()

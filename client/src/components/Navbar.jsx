@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdSearch } from "react-icons/md";
+import {NavLink} from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -11,6 +12,7 @@ function Navbar() {
             <input className='w-[80%] md:w-[35vw] px-7 py-4 outline-none bg-zinc-100  rounded-xl  ' type='text' placeholder='Enter blog name to read' id='search' autoComplete='false' />
             <MdSearch className=' mt-2 text-black w-[8vw] mr-3' size={40}/>
       </div>
+      <NavLink to='/admin' className='bg-green-600 px-4 py-2 rounded-xl text-xl text-white'>Create blog </NavLink>
     </div>
   )
 }
