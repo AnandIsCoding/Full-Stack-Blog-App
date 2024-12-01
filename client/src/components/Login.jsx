@@ -10,7 +10,7 @@ function Login() {
       event.preventDefault()
       console.log(email.current.value , password.current.value)
       try {
-        const res = await axios.post('http://localhost:3000/api/v1/login', {
+        const res = await axios.post('https://genmyblog.onrender.com/api/v1/login', {
           email :email.current.value,
           password:password.current.value
         })

@@ -14,7 +14,7 @@ function Blog() {
   const getBlogData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/v1/blog/getblogbyid/${id}`
+        `https://genmyblog.onrender.com/api/v1/blog/getblogbyid/${id}`
       );
       setBlogData(response.data.blog[0]);
     } catch (error) {

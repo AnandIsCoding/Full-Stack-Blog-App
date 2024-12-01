@@ -13,7 +13,7 @@ const BlogContextProvider = ({children}) =>{
     const getAllBlogs = async() =>{
         // Fetch all blogs from the database
         // Return the fetched blogs
-        const {data} = await axios.get('http://localhost:3000/api/v1/blog/getblogs')
+        const {data} = await axios.get('https://genmyblog.onrender.com/api/v1/blog/getblogs')
         setAllBlogs(data.blogs)
 
     }

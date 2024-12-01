@@ -19,7 +19,7 @@ import fileupload from 'express-fileupload';
 
 app.use(
   cors({
-    origin: "http://localhost:5173",//frontend url
+    origin: "https://genmyblog.onrender.com/",//frontend url
     credentials: true,
   })
 );
